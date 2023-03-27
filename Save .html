@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           body{
+  text-align:center;
+  background-color: lightgreen;
+ 
+}
+
+#p1{
+  word-spacing:10px;
+  font-size: 80px;
+  font-variant: small-caps;
+  color:#E64A19;
+}
+ 
+#image1, #image2, #image3, #image4, #image5{
+  border-style: solid;
+  border-color:#8E24AA;
+  border-width: 5px; 
+  border-radius: 20px;
+  padding : 5px;
+  width: 250px;
+  height:200px;
+}
+
+#image1{
+  border-image: url(https://images.unsplash.com/photo-1587682725980-b9ac16626266?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 30 round;
+}
+
+#reason1, #reason2, #reason3, #reason4, #reason5{
+  text-align: center;
+ font-size:30px;
+  color: #283593;
+}
+button{
+  width: 75px;
+  height: 30px;
+  font-size: 17px;
+  color: blue;
+}
+  h3{
+    font-size: 50px;
+  }         
+        </style>
+       
+
+        <title>Save trees</title>
+    </head>
+    <body>
+        <p id="p1">Save Tree</p>
+        <h3>Here are 5 Reasons to Save Trees</h3>
+        <p id="reason1">1. Trees provide Oxygen</p>
+        <img id ="image1" src="https://www.kindpng.com/picc/m/301-3012608_tree-give-us-oxygen-hd-png-download.png">
+        <br><br>
+        <button onclick="nextSlide()"type="button">Next</button>
+
+        <script>
+            var reason=['2. Trees purify air','3. Trees conserve energy','4. Trees save water','5. Trees provide food','1. Trees produce Oxygen'];
+var image=['https://tse2.mm.bing.net/th?id=OIP.S8GP6Tpv1aWDGgloSkp-WAHaFS&pid=Api&P=0',
+'https://www.blog.vivanls.com/wp-content/uploads/2020/08/61YFR8mbUuL._SL1000_.jpg',
+'https://tse1.mm.bing.net/th?id=OIP.Q3UlyZ5N4-XxhGQeVRwgdAHaH9&pid=Api&P=0',
+'https://hi-static.z-dn.net/files/dab/5a4a2e3a6981bb35e18e8784a3d538d9.jpg',
+'https://www.kindpng.com/picc/m/301-3012608_tree-give-us-oxygen-hd-png-download.png'];
+
+var i=0;
+function nextSlide(){
+  document.getElementById("reason1").innerHTML= reason[i];
+  document.getElementById("image1"). src=image[i];
+  i++;
+  if (i==5){
+    i=0;
+  }
+}
+        </script>
+
+
+     
+ </body>
+</html>
+        
